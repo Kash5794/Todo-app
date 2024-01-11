@@ -10,7 +10,7 @@ const [addedTask, setAddedTask] = useState([])
 const [completedTask, setCompletedTask] = useState([])
 const [completeButton, setCompleteButton] = useState(false)
 const handleAddTask =()=>{
-if(postContent.length!=0){
+if(postContent.length!==0){
     setAddedTask([...addedTask,postContent])
 }    
 
@@ -20,7 +20,7 @@ setPostContent(task)
 }
 const completeTask = (task)=>{
 
-const updatedTask =addedTask.filter((item)=>item!=task)
+const updatedTask =addedTask.filter((item)=>item!==task)
 toast.success('Task completed successfully')
 setAddedTask(updatedTask)
 setCompletedTask([...completedTask,task])
